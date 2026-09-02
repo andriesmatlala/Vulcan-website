@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vulcan Analytical</title>
+    <title>Vulcan Analytical | Metallurgical, Mechanical & Materials Testing Laboratory</title>
     <!-- Pico.css base for lightning-fast responsive framework layout -->
     <link rel="stylesheet" href="https://jsdelivr.net">
 
     <style>
         /* VML Corporate Inspired Style Overrides */
         :root {
-            --pico-primary: #0f172a; /* Deep Charcoal Slate */
+            --pico-primary: #0284c7; /* Vibrant Blue for technical accents */
             --pico-background-color: #ffffff;
             --pico-typography-spacing: 1.6;
         }
@@ -20,23 +20,35 @@
             color: #334155;
         }
 
-        /* Clean Minimalist Corporate Header */
+        /* Clean Minimalist Corporate Header with Logo integration */
         .vml-nav-container {
             border-bottom: 1px solid #e2e8f0;
             background: #ffffff;
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .logo-flex-container {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Space between logo and text */
+        }
+        .logo-img {
+            height: 45px; /* Adjust height to fit your logo aspect ratio cleanly */
+            width: auto;
+            object-fit: contain;
         }
         .vml-nav-container strong {
             color: #0f172a;
-            font-size: 1.25rem;
+            font-size: 1.5rem; /* Enlarged Heading text size */
             letter-spacing: -0.5px;
+            font-weight: 800;
         }
         .vml-nav-container a {
             color: #475569 !important;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
         }
         .vml-nav-container a:hover {
@@ -45,41 +57,44 @@
 
         /* High-Impact Structured Industrial Hero Banner */
         .vml-hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)),
                         url('https://unsplash.com') center/cover no-repeat;
             color: #ffffff;
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
             margin-bottom: 4rem;
         }
         .vml-hero h1 {
             color: #ffffff;
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 3.25rem; /* Enlarged Main Page Title */
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            letter-spacing: -1px;
         }
         .vml-hero p {
             color: #94a3b8;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            font-size: 1.15rem;
+            font-size: 1.25rem;
+            line-height: 1.6;
         }
 
         /* VML Inspired Segmented Layout Cards */
         .section-title {
             text-align: center;
-            font-weight: 700;
+            font-weight: 800;
             color: #0f172a;
-            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            margin-bottom: 3rem;
             position: relative;
         }
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
-            height: 3px;
+            width: 60px;
+            height: 4px;
             background: #0284c7;
-            margin: 10px auto 0;
+            margin: 12px auto 0;
         }
 
         .vml-card {
@@ -88,25 +103,28 @@
             border-radius: 4px;
             padding: 2rem;
             transition: all 0.2s ease;
+            margin-bottom: 1rem;
         }
         .vml-card:hover {
             border-color: #cbd5e1;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transform: translateY(-2px);
         }
         .vml-card h3 {
             color: #0f172a;
-            font-size: 1.35rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
         }
 
         /* Dark High-Contrast Contact Form Wrapper */
         .vml-contact-section {
             background-color: #0f172a !important;
             color: #ffffff;
-            padding: 3rem;
+            padding: 3.5rem 3rem;
             border-radius: 6px;
             border: none;
-            margin-top: 4rem;
+            margin-top: 5rem;
         }
         .vml-contact-section h2, .vml-contact-section p {
             color: #ffffff;
@@ -130,6 +148,7 @@
             color: #ffffff;
             font-weight: 600;
             letter-spacing: 0.5px;
+            padding: 0.75rem 2rem;
         }
         .vml-contact-section button:hover {
             background-color: #0369a1;
@@ -144,7 +163,13 @@
     <div class="vml-nav-container">
         <header class="container">
             <nav>
-                <ul><li><strong>🔬 VULCAN ANALYTICAL</strong></li></ul>
+                <ul>
+                    <li class="logo-flex-container">
+                        <!-- Points to your uploaded logo file in root repository -->
+                        <img src="logo.png" alt="Vulcan Analytical Logo" class="logo-img" onerror="this.style.display='none'">
+                        <strong>VULCAN ANALYTICAL</strong>
+                    </li>
+                </ul>
                 <ul>
                     <li><a href="#services">Testing Services</a></li>
                     <li><a href="#instrumentation">Instrumentation</a></li>
@@ -157,23 +182,35 @@
     <!-- Hero Showcase -->
     <section class="vml-hero">
         <div class="container">
-            <h1>Independent Metallurgical Testing & Analysis</h1>
-            <p>Delivering heavy industrial failure investigations, material compliance parameters, and physical chemistry services engineered directly for mining complexes and fabrication workshops.</p>
+            <h1>Independent Metallurgical & Materials Testing Laboratory</h1>
+            <p>Delivering precision mechanical verification, failure investigations, elemental analysis, and process chemistry testing engineered strictly for heavy fabrication, mining operations, and structural sectors.</p>
         </div>
     </section>
 
     <main class="container">
-        <!-- Testing Services Section -->
+        <!-- Core Testing Services Section -->
         <section id="services" style="margin-bottom: 5rem;">
             <h2 class="section-title">Core Laboratory Capabilities</h2>
+
             <div class="grid">
                 <div class="vml-card">
-                    <h3>Alloy Failure Investigations</h3>
-                    <p>Definitive root-cause analysis of critical engineering structural components, operational weldments, and heavy plant equipment failures. High-resolution evaluation covering structural fracture mechanics and full microstructure tracking profiles.</p>
+                    <h3>Mechanical Testing</h3>
+                    <p>Comprehensive destructive testing arrays validating material structural boundaries and regulatory compliance tolerances. Standard configurations cover full **Tensile verification**, **Bend evaluation parameters**, certified **Impact configuration protocols**, and structural **Hardness matrices**.</p>
                 </div>
                 <div class="vml-card">
-                    <h3>Physical Chemistry Testing</h3>
-                    <p>Accurate evaluations determining precise Material Specific Gravity (SG) profiles along with Particle Size Distribution (PSD) metrics. Fully optimized data configurations to guide processing plant logistics and mining tailings control parameters.</p>
+                    <h3>Alloy Failure Investigations</h3>
+                    <p>Definitive root-cause analysis of critical engineering components, structural weldments, and heavy processing plant equipment failures. High-resolution evaluation mapping macro-fractography mechanics and full microstructure tracing profiles.</p>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top: 1rem;">
+                <div class="vml-card">
+                    <h3>Physical Chemistry & Geotechnical</h3>
+                    <p>Accurate evaluations tracking precise Material Specific Gravity (SG) profiles alongside high-resolution Particle Size Distribution (PSD) analytics. Engineered data processing to guide mining plant operations and milling circuits.</p>
+                </div>
+                <div class="vml-card">
+                    <h3>Moisture Analysis</h3>
+                    <p>Quantitative thermal evaluation matrix monitoring moisture mass configurations within process stream samples, bulk commodities, and geological material profiles to ensure precise transport compliance and chemical process stability metrics.</p>
                 </div>
             </div>
         </section>
@@ -220,10 +257,12 @@
                     <label for="service_type">Scope of Analysis Required</label>
                     <select id="service_type" name="service_type" required>
                         <option value="" disabled selected>Select analytical path...</option>
+                        <option value="Mechanical Testing">Mechanical Testing (Tensile, Impact, Hardness, Bend)</option>
                         <option value="Failure Analysis">Alloy Failure Investigation</option>
-                        <option value="XRF / LECO">Tailings Profiling (XRF / LECO CS)</option>
+                        <option value="Elemental Composition">Elemental Composition (XRF / LECO CS) </option>
                         <option value="Physical Chemistry">Physical Chemistry (SG / Particle Size)</option>
-                        <option value="Other">Other Specialized Laboratory Testing</option>
+                        <option value="Moisture Analysis">Proximate / Moisture Analysis</option>
+                
                     </select>
 
                     <label for="message">Scope of Work / Engineering Sample Specifications</label>
