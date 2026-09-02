@@ -3,52 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vulcan Analytical Pty Ltd</title>
-    <!-- Pico.css for an instant, clean, industrial scientific layout -->
+    <title>Vulcan Analytical | Metallurgical & Materials Testing Laboratory</title>
+    <!-- Pico.css base for lightning-fast responsive framework layout -->
     <link rel="stylesheet" href="https://jsdelivr.net">
+
     <style>
-        /* Color Palette & Global Overrides */
+        /* VML Corporate Inspired Style Overrides */
         :root {
-            --pico-primary: #0284c7; /* Vibrant Slate Blue for buttons/links */
-            --pico-background-color: #f8fafc; /* Crisp off-white lab background */
+            --pico-primary: #0f172a; /* Deep Charcoal Slate */
+            --pico-background-color: #ffffff;
+            --pico-typography-spacing: 1.6;
         }
 
-        /* Deep Industrial Navy Header Banner */
-        .brand-header {
-            background-color: #0f172a;
-            padding: 1rem 0;
-            margin-bottom: 2rem;
-            border-bottom: 4px solid #0284c7;
-        }
-        .brand-header strong, .brand-header a {
-            color: #ffffff !important;
-        }
-        .brand-header a:hover {
-            color: #38bdf8 !important;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #334155;
         }
 
-        /* Hero Showcase Section styling */
-        .hero-banner {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: #ffffff;
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-        .hero-banner h1 { color: #ffffff; }
-        .hero-banner p { color: #94a3b8; }
-
-        /* Clean Content Cards */
-        article {
-            background-color: #ffffff !important;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        article header {
-            background-color: #f1f5f9 !important;
+        /* Clean Minimalist Corporate Header */
+        .vml-nav-container {
             border-bottom: 1px solid #e2e8f0;
+            background: #ffffff;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .vml-nav-container strong {
             color: #0f172a;
+            font-size: 1.25rem;
+            letter-spacing: -0.5px;
+        }
+        .vml-nav-container a {
+            color: #475569 !important;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .vml-nav-container a:hover {
+            color: #0284c7 !important;
+        }
+
+        /* High-Impact Structured Industrial Hero Banner */
+        .vml-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+                        url('https://unsplash.com') center/cover no-repeat;
+            color: #ffffff;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .vml-hero h1 {
+            color: #ffffff;
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .vml-hero p {
+            color: #94a3b8;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+        }
+
+        /* VML Inspired Segmented Layout Cards */
+        .section-title {
+            text-align: center;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #0284c7;
+            margin: 10px auto 0;
+        }
+
+        .vml-card {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 2rem;
+            transition: all 0.2s ease;
+        }
+        .vml-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .vml-card h3 {
+            color: #0f172a;
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Dark High-Contrast Contact Form Wrapper */
+        .vml-contact-section {
+            background-color: #0f172a !important;
+            color: #ffffff;
+            padding: 3rem;
+            border-radius: 6px;
+            border: none;
+            margin-top: 4rem;
+        }
+        .vml-contact-section h2, .vml-contact-section p {
+            color: #ffffff;
+        }
+        .vml-contact-section label {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        .vml-contact-section input, .vml-contact-section select, .vml-contact-section textarea {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            color: #ffffff;
+        }
+        .vml-contact-section input:focus, .vml-contact-section select:focus, .vml-contact-section textarea:focus {
+            border-color: #0284c7;
+            box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.5);
+        }
+        .vml-contact-section button {
+            background-color: #0284c7;
+            border: none;
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .vml-contact-section button:hover {
+            background-color: #0369a1;
         }
 
         .hidden-honeypot { display: none !important; }
@@ -56,95 +140,100 @@
 </head>
 <body>
 
-    <header class="brand-header">
-        <nav>
-            <ul><li><strong>🔬VULCAN ANALYTICAL PTY LTD</strong></li></ul>
-            <ul>
-                <li><a href="#services">Testing Services</a></li>
-                <li><a href="#instrumentation">Instrumentation</a></li>
-                <li><a href="#contact">Request Analysis</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header Navigation -->
+    <div class="vml-nav-container">
+        <header class="container">
+            <nav>
+                <ul><li><strong>🔬 VULCAN ANALYTICAL</strong></li></ul>
+                <ul>
+                    <li><a href="#services">Testing Services</a></li>
+                    <li><a href="#instrumentation">Instrumentation</a></li>
+                    <li><a href="#contact">Request Analysis</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Hero Showcase -->
+    <section class="vml-hero">
+        <div class="container">
+            <h1>Independent Metallurgical Testing & Analysis</h1>
+            <p>Delivering heavy industrial failure investigations, material compliance parameters, and physical chemistry services engineered directly for mining complexes and fabrication workshops.</p>
+        </div>
+    </section>
 
     <main class="container">
-        <!-- Hero Section -->
-        <section class = "hero-banner>
-            <h1>Metallurgical Failure Investigations & Material Testing</h1>
-            <p>Providing definitive failure analysis, elemental characterization, and physical chemistry services for the mining, heavy fabrication, and engineering sectors.</p>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services">
-            <h2>Core Capabilities</h2>
+        <!-- Testing Services Section -->
+        <section id="services" style="margin-bottom: 5rem;">
+            <h2 class="section-title">Core Laboratory Capabilities</h2>
             <div class="grid">
-                <article>
+                <div class="vml-card">
                     <h3>Alloy Failure Investigations</h3>
-                    <p>Root-cause evaluations of structural components, weldments, and machinery failures in mining environments. Detailed fractography and microstructure analysis.</p>
-                </article>
-                <article>
-                    <h3>Physical Chemistry & Geotechnical</h3>
-                    <p>Accurate determinations of Material Specific Gravity (SG) and Particle Size Distribution (PSD) for process engineering and tailings management optimization.</p>
-                </article>
+                    <p>Definitive root-cause analysis of critical engineering structural components, operational weldments, and heavy plant equipment failures. High-resolution evaluation covering structural fracture mechanics and full microstructure tracking profiles.</p>
+                </div>
+                <div class="vml-card">
+                    <h3>Physical Chemistry Testing</h3>
+                    <p>Accurate evaluations determining precise Material Specific Gravity (SG) profiles along with Particle Size Distribution (PSD) metrics. Fully optimized data configurations to guide processing plant logistics and mining tailings control parameters.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Instrumentation Section -->
-        <section id="instrumentation">
-            <h2>Analytical Instrumentation</h2>
-            <p>Our facility leverages industry-standard hardware to deliver fast, highly accurate data turnarounds:</p>
-
+        <!-- Technical Instrumentation Section -->
+        <section id="instrumentation" style="margin-bottom: 5rem;">
+            <h2 class="section-title">Analytical Instrumentation Menu</h2>
             <div class="grid">
-                <article>
-                    <header><strong>X-Ray Fluorescence (XRF)</strong></header>
-                    <p><small>Quantitative elemental screening and composition mapping of mineral structures, slags, and mine tailings processing samples.</small></p>
-                </article>
-                <article>
-                    <header><strong>LECO CS Elemental Analyzer</strong></header>
-                    <p><small>Ultra-precise Carbon and Sulfur matrix determination for rigorous structural alloy grade validation and environmental screening.</small></p>
-                </article>
+                <div class="vml-card">
+                    <h3>X-Ray Fluorescence (XRF)</h3>
+                    <p>Quantitative high-speed elemental screening arrays and detailed multi-matrix composition mapping protocols for mine processing tailings monitoring, mineral concentrates, and waste stream profiling calculations.</p>
+                </div>
+                <div class="vml-card">
+                    <h3>LECO CS Elemental Analysis</h3>
+                    <p>Ultra-low precision interstitial Matrix Carbon and Sulfur quantification thresholds. Explicit engineering validation data tracking for strict alloy classification, casting consistency validation, and structural steel grade specifications.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Enquiry Section -->
+        <!-- Request / Enquiry Section -->
         <section id="contact">
-            <article>
+            <article class="vml-contact-section">
                 <h2>Submit an Analytical or Investigation Request</h2>
-                <p>Submit your testing specifications, alloy types, or scope of work below. Our laboratory engineers will respond promptly.</p>
+                <p>Provide your testing criteria or physical sample details below. A laboratory engineer will generate your technical tracking assessment profile.</p>
 
-                <form action="https://api.web3forms.com/submit" method="POST">
-                
+                <!-- Native fallback configuration targeting Web3Forms directly -->
+                <form action="https://api.web3forms.com" method="POST">
+                    <!-- Paste your web3forms access key inside the value parameter below -->
                     <input type="hidden" name="access_key" value="258a88b5-880e-4c2d-8d3e-6af19886ed01">
+                    <input type="hidden" name="redirect" value="https://vulcananalytical.co.za">
                     <input type="checkbox" name="botcheck" class="hidden-honeypot">
 
                     <div class="grid">
                         <div>
-                            <label for="name">Company / Contact Name</label>
+                            <label for="name">Company / Engineer Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
                         <div>
                             <label for="email">Corporate Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="j.doe@miningcorp.com" required>
+                            <input type="email" id="email" name="email" placeholder="j.doe@miningcorp.co.za" required>
                         </div>
                     </div>
 
-                    <label for="service_type">Primary Service Needed</label>
+                    <label for="service_type">Scope of Analysis Required</label>
                     <select id="service_type" name="service_type" required>
-                        <option value="" disabled selected>Select service scope...</option>
+                        <option value="" disabled selected>Select analytical path...</option>
                         <option value="Failure Analysis">Alloy Failure Investigation</option>
-                        <option value="XRF / LECO">Tailings Analysis (XRF / LECO CS)</option>
+                        <option value="XRF / LECO">Tailings Profiling (XRF / LECO CS)</option>
                         <option value="Physical Chemistry">Physical Chemistry (SG / Particle Size)</option>
-                        <option value="Other">Other Analytical Services</option>
+                        <option value="Other">Other Specialized Laboratory Testing</option>
                     </select>
 
-                    <label for="message">Scope of Work / Sample Description</label>
-                    <textarea id="message" name="message" placeholder="Describe sample dimensions, operating environment, or specific testing standards required..." required></textarea>
+                    <label for="message">Scope of Work / Engineering Sample Specifications</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Specify failure environments, operating stresses, sample boundaries, or required ASTM/ISO testing standard parameters..." required></textarea>
 
                     <button type="submit">Submit Request to Lab Manager</button>
                 </form>
             </article>
         </section>
-    </main>
+  
 
     <footer class="container">
         <small>© 2026 Vulcan Analytical Pty Ltd. Independent Testing Laboratory.</small>
