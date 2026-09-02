@@ -233,15 +233,17 @@
         <section id="contact">
             <article class="vml-contact-section">
                 <h2>Submit an Analytical or Investigation Request</h2>
-                <p>Provide your testing criteria or physical sample details below. A laboratory engineer will generate your technical tracking assessment profile.</p>
+                <p>Provide your testing criteria or physical sample details below. A laboratory engineer will review your scope of work promptly.</p>
 
-                <!-- Native fallback configuration targeting Web3Forms directly -->
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <!-- Paste your web3forms access key inside the value parameter below -->
+                <!-- 1. The ONLY Form Element Opening Tag -->
+                <form action="https://web3forms.com" method="POST">
+
+                    <!-- 2. Hidden Configuration Parameters (MUST be inside the form tags) -->
                     <input type="hidden" name="access_key" value="258a88b5-880e-4c2d-8d3e-6af19886ed01">
                     <input type="hidden" name="redirect" value="thanks.html">
                     <input type="checkbox" name="botcheck" class="hidden-honeypot">
 
+                    <!-- 3. Contact Details Matrix Grid Group -->
                     <div class="grid">
                         <div>
                             <label for="name">Company / Engineer Name</label>
@@ -253,22 +255,25 @@
                         </div>
                     </div>
 
+                    <!-- 4. Correctly Framed Scope Matrix Field -->
                     <label for="service_type">Scope of Analysis Required</label>
                     <select id="service_type" name="service_type" required>
                         <option value="" disabled selected>Select analytical path...</option>
                         <option value="Mechanical Testing">Mechanical Testing (Tensile, Impact, Hardness, Bend)</option>
                         <option value="Failure Analysis">Alloy Failure Investigation</option>
-                        <option value="Elemental Composition">Elemental Composition (XRF / LECO CS) </option>
-                        <option value="Physical Chemistry">Physical Chemistry (SG / Particle Size)</option>
+                        <option value="Elemental Composition">Elemental Composition (XRF / LECO CS)</option>
                         <option value="Moisture Analysis">Proximate / Moisture Analysis</option>
-                
+                        <option value="Physical Chemistry">Physical Chemistry (SG / Particle Size)</option>
                     </select>
 
+                    <!-- 5. Correctly Formatted Message Text Area Box -->
                     <label for="message">Scope of Work / Engineering Sample Specifications</label>
                     <textarea id="message" name="message" rows="5" placeholder="Specify failure environments, operating stresses, sample boundaries, or required ASTM/ISO testing standard parameters..." required></textarea>
 
+                    <!-- 6. Submission Button Interface Trigger -->
                     <button type="submit">Submit Request to Lab Manager</button>
-                </form>
+
+                </form> <!-- 7. The ONLY Form Element Closing Tag -->
             </article>
         </section>
   
