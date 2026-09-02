@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials Testing & Metallurgical Laboratory</title>
+    <!-- Pico.css for an instant, clean, industrial scientific layout -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <style>
+        :root { --pico-primary: #1e3a8a; } /* Professional Deep Blue Accent */
+        .badge { background: #f3f4f6; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <nav>
+            <ul><li><strong>🔬 Materials & Metallurgical Analytics</strong></li></ul>
+            <ul>
+                <li><a href="#services">Testing Services</a></li>
+                <li><a href="#instrumentation">Instrumentation</a></li>
+                <li><a href="#contact">Request Analysis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section>
+            <h1>Metallurgical Failure Investigations & Material Testing</h1>
+            <p>Providing definitive failure analysis, elemental characterization, and physical chemistry services for the mining, heavy fabrication, and engineering sectors.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Core Capabilities</h2>
+            <div class="grid">
+                <article>
+                    <h3>Alloy Failure Investigations</h3>
+                    <p>Root-cause evaluations of structural components, weldments, and machinery failures in mining and fabrication environments. Detailed fractography and microstructure analysis.</p>
+                </article>
+                <article>
+                    <h3>Physical Chemistry & Geotechnical</h3>
+                    <p>Accurate determinations of Material Specific Gravity (SG) and Particle Size Distribution (PSD) for process engineering and tailings management optimization.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Instrumentation Section -->
+        <section id="instrumentation">
+            <h2>Analytical Instrumentation</h2>
+            <p>Our facility leverages industry-standard hardware to deliver fast, highly accurate data turnarounds:</p>
+            <ul>
+                <li><strong>XRF Spectroscopy (X-ray Fluorescence):</strong> Quantitative elemental screening and composition mapping of mine tailings, slags, and mineral samples.</li>
+                <li><strong>LECO CS Analyzer:</strong> Ultra-precise Carbon and Sulfur determination for steel grade validation, alloy classification, and environmental screening.</li>
+            </ul>
+        </section>
+
+        <!-- Dynamic Enquiry Section -->
+        <section id="contact">
+            <article>
+                <h2>Submit an Analytical or Investigation Request</h2>
+                <p>Submit your testing specifications, alloy types, or scope of work below. Our laboratory engineers will respond promptly.</p>
+
+                <form action="https://web3forms.com" method="POST">
+                    <!-- Paste your web3forms access key below -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="grid">
+                        <div>
+                            <label for="name">Company / Contact Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email">Corporate Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="j.doe@miningcorp.com" required>
+                        </div>
+                    </div>
+
+                    <label for="service_type">Primary Service Needed</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="" disabled selected>Select service scope...</option>
+                        <option value="Failure Analysis">Alloy Failure Investigation</option>
+                        <option value="XRF / LECO">Tailings Analysis (XRF / LECO CS)</option>
+                        <option value="Physical Chemistry">Physical Chemistry (SG / Particle Size)</option>
+                        <option value="Other">Other Analytical Services</option>
+                    </select>
+
+                    <label for="message">Scope of Work / Sample Description</label>
+                    <textarea id="message" name="message" placeholder="Describe sample dimensions, operating environment, or specific ASTM standards required..." required></textarea>
+
+                    <button type="submit">Submit Request to Lab Manager</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="container">
+        <small>© 2026 Materials & Metallurgical Analytics. Independent Testing Laboratory.</small>
+    </footer>
+
+</body>
+</html>
