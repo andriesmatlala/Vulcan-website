@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materials Testing & Metallurgical Laboratory</title>
+    <title>Vulcan Analytical Pty Ltd</title>
     <!-- Pico.css for an instant, clean, industrial scientific layout -->
     <link rel="stylesheet" href="https://jsdelivr.net">
     <style>
         :root { --pico-primary: #1e3a8a; } /* Professional Deep Blue Accent */
-        .badge { background: #f3f4f6; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+        .hidden-honeypot { display: none !important; }
     </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
             <div class="grid">
                 <article>
                     <h3>Alloy Failure Investigations</h3>
-                    <p>Root-cause evaluations of structural components, weldments, and machinery failures in mining and fabrication environments. Detailed fractography and microstructure analysis.</p>
+                    <p>Root-cause evaluations of structural components, weldments, and machinery failures in mining environments. Detailed fractography and microstructure analysis.</p>
                 </article>
                 <article>
                     <h3>Physical Chemistry & Geotechnical</h3>
@@ -50,22 +50,29 @@
         <section id="instrumentation">
             <h2>Analytical Instrumentation</h2>
             <p>Our facility leverages industry-standard hardware to deliver fast, highly accurate data turnarounds:</p>
-            <ul>
-                <li><strong>XRF Spectroscopy (X-ray Fluorescence):</strong> Quantitative elemental screening and composition mapping of mine tailings, slags, and mineral samples.</li>
-                <li><strong>LECO CS Analyzer:</strong> Ultra-precise Carbon and Sulfur determination for steel grade validation, alloy classification, and environmental screening.</li>
-            </ul>
+
+            <div class="grid">
+                <article>
+                    <header><strong>X-Ray Fluorescence (XRF)</strong></header>
+                    <p><small>Quantitative elemental screening and composition mapping of mineral structures, slags, and mine tailings processing samples.</small></p>
+                </article>
+                <article>
+                    <header><strong>LECO CS Elemental Analyzer</strong></header>
+                    <p><small>Ultra-precise Carbon and Sulfur matrix determination for rigorous structural alloy grade validation and environmental screening.</small></p>
+                </article>
+            </div>
         </section>
 
-        <!-- Dynamic Enquiry Section -->
+        <!-- Enquiry Section -->
         <section id="contact">
             <article>
                 <h2>Submit an Analytical or Investigation Request</h2>
                 <p>Submit your testing specifications, alloy types, or scope of work below. Our laboratory engineers will respond promptly.</p>
 
                 <form action="https://web3forms.com" method="POST">
-                    <!-- Paste your web3forms access key below -->
+                
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <input type="checkbox" name="botcheck" class="hidden-honeypot">
 
                     <div class="grid">
                         <div>
@@ -88,7 +95,7 @@
                     </select>
 
                     <label for="message">Scope of Work / Sample Description</label>
-                    <textarea id="message" name="message" placeholder="Describe sample dimensions, operating environment, or specific ASTM standards required..." required></textarea>
+                    <textarea id="message" name="message" placeholder="Describe sample dimensions, operating environment, or specific testing standards required..." required></textarea>
 
                     <button type="submit">Submit Request to Lab Manager</button>
                 </form>
@@ -97,8 +104,37 @@
     </main>
 
     <footer class="container">
-        <small>© 2026 Materials & Metallurgical Analytics. Independent Testing Laboratory.</small>
+        <small>© 2026 Vulcan Analytical Pty Ltd. Independent Testing Laboratory.</small>
     </footer>
 
+    <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const button = form.querySelector('button');
+        button.innerText = "Sending Securely...";
+        button.disabled = true;
+
+        const formData = new FormData(form);
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.innerHTML = `
+                    <div style="text-align: center; padding: 2rem;">
+                        <h3>✅ Enquiry Submitted Successfully</h3>
+                        <p>Thank you. A laboratory engineer will review your specifications and contact you shortly.</p>
+                    </div>`;
+            } else { throw new Error(); }
+        } catch (error) {
+            button.innerText = "Error. Try Again";
+            button.disabled = false;
+            alert("There was an issue sending your request. Please email us directly.");
+        }
+    });
+    </script>
 </body>
 </html>
