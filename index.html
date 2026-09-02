@@ -150,34 +150,6 @@
         <small>© 2026 Vulcan Analytical Pty Ltd. Independent Testing Laboratory.</small>
     </footer>
 
-    <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const button = form.querySelector('button');
-        button.innerText = "Sending Securely...";
-        button.disabled = true;
-
-        const formData = new FormData(form);
-        try {
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            });
-            if (response.ok) {
-                form.innerHTML = `
-                    <div style="text-align: center; padding: 2rem;">
-                        <h3>✅ Enquiry Submitted Successfully</h3>
-                        <p>Thank you. A laboratory engineer will review your specifications and contact you shortly.</p>
-                    </div>`;
-            } else { throw new Error(); }
-        } catch (error) {
-            button.innerText = "Error. Try Again";
-            button.disabled = false;
-            alert("There was an issue sending your request. Please email us directly.");
-        }
-    });
-    </script>
+   
 </body>
 </html>
