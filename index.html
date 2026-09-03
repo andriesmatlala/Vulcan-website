@@ -3,247 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vulcan Analytical | Metallurgical, Mechanical & Materials Testing Laboratory</title>
-    <!-- Pico.css base for lightning-fast responsive framework layout -->
+    <title>Vulcan Analytical | Laboratory Services</title>
     <link rel="stylesheet" href="https://jsdelivr.net">
-
     <style>
-        /* VML Corporate Inspired Style Overrides */
-        :root {
-            --pico-primary: #0284c7; /* Vibrant Blue for technical accents */
-            --pico-background-color: #ffffff;
-            --pico-typography-spacing: 1.6;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #334155;
-        }
-
-        /* Clean Minimalist Corporate Header with Logo integration */
-        .vml-nav-container {
-            border-bottom: 1px solid #e2e8f0;
-            background: #ffffff;
-            padding: 0.75rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-        }
-        .logo-flex-container {
-            display: flex;
-            align-items: center;
-            gap: 12px; /* Space between logo and text */
-        }
-        .logo-img {
-            height: 45px; /* Adjust height to fit your logo aspect ratio cleanly */
-            width: auto;
-            object-fit: contain;
-        }
-        .vml-nav-container strong {
-            color: #0f172a;
-            font-size: 1.5rem; /* Enlarged Heading text size */
-            letter-spacing: -0.5px;
-            font-weight: 800;
-        }
-        .vml-nav-container a {
-            color: #475569 !important;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .vml-nav-container a:hover {
-            color: #0284c7 !important;
-        }
-
-        /* High-Impact Structured Industrial Hero Banner */
-        .vml-hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)),
-                        url('https://unsplash.com') center/cover no-repeat;
-            color: #ffffff;
-            padding: 6rem 2rem;
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        .vml-hero h1 {
-            color: #ffffff;
-            font-size: 3.25rem; /* Enlarged Main Page Title */
-            font-weight: 800;
-            margin-bottom: 1.25rem;
-            letter-spacing: -1px;
-        }
-        .vml-hero p {
-            color: #94a3b8;
-            max-width: 850px;
-            margin: 0 auto;
-            font-size: 1.25rem;
-            line-height: 1.6;
-        }
-
-        /* VML Inspired Segmented Layout Cards */
-        .section-title {
-            text-align: center;
-            font-weight: 800;
-            color: #0f172a;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #0284c7;
-            margin: 12px auto 0;
-        }
-
-        .vml-card {
-            background: #f8fafc !important;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 2rem;
-            transition: all 0.2s ease;
-            margin-bottom: 1rem;
-        }
-        .vml-card:hover {
-            border-color: #cbd5e1;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            transform: translateY(-2px);
-        }
-        .vml-card h3 {
-            color: #0f172a;
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* Dark High-Contrast Contact Form Wrapper */
-        .vml-contact-section {
-            background-color: #0f172a !important;
-            color: #ffffff;
-            padding: 3.5rem 3rem;
-            border-radius: 6px;
-            border: none;
-            margin-top: 5rem;
-        }
-        .vml-contact-section h2, .vml-contact-section p {
-            color: #ffffff;
-        }
-        .vml-contact-section label {
-            color: #94a3b8;
-            font-weight: 500;
-        }
-        .vml-contact-section input, .vml-contact-section select, .vml-contact-section textarea {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            color: #ffffff;
-        }
-        .vml-contact-section input:focus, .vml-contact-section select:focus, .vml-contact-section textarea:focus {
-            border-color: #0284c7;
-            box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.5);
-        }
-        .vml-contact-section button {
-            background-color: #0284c7;
-            border: none;
-            color: #ffffff;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            padding: 0.75rem 2rem;
-        }
-        .vml-contact-section button:hover {
-            background-color: #0369a1;
-        }
-
+        :root { --pico-primary: #0284c7; --pico-background-color: #ffffff; --pico-typography-spacing: 1.6; }
+        body { font-family: 'Segoe UI', sans-serif; color: #334155; }
+        .vml-nav-container { border-bottom: 1px solid #e2e8f0; background: #ffffff; padding: 0.75rem 0; position: sticky; top: 0; z-index: 1000; }
+        .logo-flex-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 45px; width: auto; object-fit: contain; }
+        .vml-nav-container strong { color: #0f172a; font-size: 1.5rem; font-weight: 800; }
+        .vml-nav-container a { color: #475569 !important; font-weight: 600; text-decoration: none; }
+        .vml-nav-container a:hover { color: #0284c7 !important; }
+        .vml-hero { background: linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)), url('https://unsplash.com') center/cover no-repeat; color: #ffffff; padding: 6rem 2rem; text-align: center; margin-bottom: 4rem; }
+        .vml-hero h1 { color: #ffffff; font-size: 3.25rem; font-weight: 800; margin-bottom: 1.25rem; }
+        .vml-hero p { color: #94a3b8; max-width: 850px; margin: 0 auto; font-size: 1.25rem; }
+        .section-title { text-align: center; font-weight: 800; color: #0f172a; font-size: 2rem; margin-bottom: 3rem; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #0284c7; margin: 12px auto 0; }
+        .vml-card { background: #f8fafc !important; border: 1px solid #e2e8f0; border-radius: 4px; padding: 2rem; margin-bottom: 1rem; }
+        .vml-contact-section { background-color: #0f172a !important; color: #ffffff; padding: 3.5rem 3rem; border-radius: 6px; margin-top: 5rem; }
+        .vml-contact-section h2, .vml-contact-section p { color: #ffffff; }
+        .vml-contact-section label { color: #94a3b8; font-weight: 500; }
+        .vml-contact-section input, .vml-contact-section select, .vml-contact-section textarea { background-color: #1e293b; border: 1px solid #334155; color: #ffffff; }
+        .vml-contact-section button { background-color: #0284c7; border: none; color: #ffffff; font-weight: 600; padding: 0.75rem 2rem; }
+        .vml-contact-section button:hover { background-color: #0369a1; }
         .hidden-honeypot { display: none !important; }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <div class="vml-nav-container">
         <header class="container">
-            <nav style = "display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%;">
-                <div class= "logo-flex-container" style="justify-content: center; width: 100%;">
-                        <!-- Points to your uploaded logo file in root repository -->
-                        <img src="logo.png.jpg" alt="Vulcan Analytical Logo" class="logo-img" onerror="this.style.display='none'">
-                        <strong>VULCAN ANALYTICAL</strong>
-                    </div>
-                
-                    <ul style="display: flex; justify-content: center; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; width: 100%;">
-                        <li style="margin: 0; padding: 0;"><a href="#services">Testing Services</a></li>
-                        <li style="margin: 0; padding: 0;"><a href="#instrumentation">Instrumentation</a></li>
-                        <li style="margin: 0; padding: 0;"><a href="#contact">Request Analysis</a></li>
-                    </ul>
+            <nav style="display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%;">
+                <div class="logo-flex-container" style="justify-content: center; width: 100%;">
+                    <img src="logo.png" alt="Vulcan Analytical Logo" class="logo-img" onerror="this.style.display='none'">
+                    <strong>VULCAN ANALYTICAL</strong>
+                </div>
+                <ul style="display: flex; justify-content: center; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; width: 100%;">
+                    <li><a href="#services">Testing Services</a></li>
+                    <li><a href="#instrumentation">Instrumentation</a></li>
+                    <li><a href="#contact">Request Analysis</a></li>
+                </ul>
             </nav>
         </header>
     </div>
 
-    <!-- Hero Showcase -->
     <section class="vml-hero">
         <div class="container">
             <h1>Independent Metallurgical & Materials Testing Laboratory</h1>
-            <p>Delivering precision mechanical verification, failure investigations, elemental analysis, and process chemistry testing engineered strictly for heavy fabrication, mining operations, and structural sectors.</p>
+            <p>Precision mechanical verification, failure investigations, elemental analysis, and process chemistry testing engineered for heavy fabrication and mining sectors.</p>
         </div>
     </section>
 
     <main class="container">
-        <!-- Core Testing Services Section -->
         <section id="services" style="margin-bottom: 5rem;">
             <h2 class="section-title">Core Laboratory Capabilities</h2>
-
             <div class="grid">
                 <div class="vml-card">
                     <h3>Mechanical Testing</h3>
-                    <p>Comprehensive destructive testing arrays validating material structural boundaries and regulatory compliance tolerances. Standard configurations cover full **Tensile verification**, **Bend evaluation parameters**, certified **Impact configuration protocols**, and structural **Hardness matrices**.</p>
+                    <p>Destructive testing arrays validating structural boundaries. Standard configurations cover **Tensile verification**, **Bend evaluation parameters**, certified **Impact testing**, and **Hardness matrices**.</p>
                 </div>
                 <div class="vml-card">
                     <h3>Alloy Failure Investigations</h3>
-                    <p>Definitive root-cause analysis of critical engineering components, structural weldments, and heavy processing plant equipment failures. High-resolution evaluation mapping macro-fractography mechanics and full microstructure tracing profiles.</p>
+                    <p>Definitive root-cause analysis of structural components, weldments, and heavy processing machinery. High-resolution fractography and microstructure tracking profiles.</p>
                 </div>
             </div>
-
             <div class="grid" style="margin-top: 1rem;">
                 <div class="vml-card">
                     <h3>Physical Chemistry & Geotechnical</h3>
-                    <p>Accurate evaluations tracking precise Material Specific Gravity (SG) profiles alongside high-resolution Particle Size Distribution (PSD) analytics. Engineered data processing to guide mining plant operations and milling circuits.</p>
+                    <p>Accurate Material Specific Gravity (SG) profiles and high-resolution Particle Size Distribution (PSD) analytics optimized for process engineering plant control variables.</p>
                 </div>
                 <div class="vml-card">
                     <h3>Moisture Analysis</h3>
-                    <p>Quantitative thermal evaluation matrix monitoring moisture mass configurations within process stream samples, bulk commodities, and geological material profiles to ensure precise transport compliance and chemical process stability metrics.</p>
+                    <p>Quantitative thermal evaluation tracking moisture mass configurations within process stream samples, bulk commodities, and geological material profiles.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Instrumentation Section -->
         <section id="instrumentation" style="margin-bottom: 5rem;">
             <h2 class="section-title">Analytical Instrumentation Menu</h2>
             <div class="grid">
                 <div class="vml-card">
                     <h3>X-Ray Fluorescence (XRF)</h3>
-                    <p>Quantitative high-speed elemental screening arrays and detailed multi-matrix composition mapping protocols for mine processing tailings monitoring, mineral concentrates, and waste stream profiling calculations.</p>
+                    <p>Quantitative elemental screening arrays and detailed multi-matrix composition mapping protocols for mine processing tailings monitoring and waste stream profiling.</p>
                 </div>
                 <div class="vml-card">
                     <h3>LECO CS Elemental Analysis</h3>
-                    <p>Ultra-low precision interstitial Matrix Carbon and Sulfur quantification thresholds. Explicit engineering validation data tracking for strict alloy classification, casting consistency validation, and structural steel grade specifications.</p>
+                    <p>Ultra-low precision Matrix Carbon and Sulfur quantification thresholds. Explicit validation tracking for strict alloy classification and structural steel specifications.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Request / Enquiry Section -->
         <section id="contact">
             <article class="vml-contact-section">
                 <h2>Submit an Analytical or Investigation Request</h2>
                 <p>Provide your testing criteria or physical sample details below. A laboratory engineer will review your scope of work promptly.</p>
 
-                <!-- 1. The ONLY Form Element Opening Tag -->
                 <form action="https://web3forms.com" method="POST">
-
-                    <!-- 2. Hidden Configuration Parameters (MUST be inside the form tags) -->
+                    <!-- PASTE KEY PERFECTLY BELOW -->
                     <input type="hidden" name="access_key" value="258a88b5-880e-4c2d-8d3e-6af19886ed01">
-                    <input type="hidden" name="redirect" value="https://vulcananalytical.co.za">
+                    <input type="hidden" name="redirect" value="thanks.html">
                     <input type="checkbox" name="botcheck" class="hidden-honeypot">
 
-                    <!-- 3. Contact Details Matrix Grid Group -->
                     <div class="grid">
                         <div>
                             <label for="name">Company / Engineer Name</label>
@@ -255,7 +115,6 @@
                         </div>
                     </div>
 
-                    <!-- 4. Correctly Framed Scope Matrix Field -->
                     <label for="service_type">Scope of Analysis Required</label>
                     <select id="service_type" name="service_type" required>
                         <option value="" disabled selected>Select analytical path...</option>
@@ -266,22 +125,18 @@
                         <option value="Physical Chemistry">Physical Chemistry (SG / Particle Size)</option>
                     </select>
 
-                    <!-- 5. Correctly Formatted Message Text Area Box -->
                     <label for="message">Scope of Work / Engineering Sample Specifications</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Specify failure environments, operating stresses, sample boundaries, or required ASTM/ISO testing standard parameters..." required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Specify failure environments, operating stresses, sample boundaries, or required testing standards..." required></textarea>
 
-                    <!-- 6. Submission Button Interface Trigger -->
                     <button type="submit">Submit Request to Lab Manager</button>
-
-                </form> <!-- 7. The ONLY Form Element Closing Tag -->
+                </form>
             </article>
         </section>
-  
+    </main>
 
-    <footer class="container">
-        <small>© 2026 Vulcan Analytical Pty Ltd. Independent Testing Laboratory.</small>
+    <footer class="container" style="text-align: center; margin-top: 5rem; padding: 2rem 0; border-top: 1px solid #e2e8f0;">
+        <small style="color: #64748b;">© 2026 Vulcan Analytical (Pty) Ltd. Commercial Testing Laboratory. All Rights Reserved.</small>
     </footer>
 
-   
 </body>
 </html>
